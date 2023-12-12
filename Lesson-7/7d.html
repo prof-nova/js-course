@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  <script>
+  // celsius to fahrenheit
+    function convertToFaren(Celsius){
+      return Celsius * (9/5) + 32;
+    }
+  // fahrenheit to celsius
+    function convertToCel(faren){
+      return  ((faren - 32 ) * 5) / 9
+    }
+    
+    function convertTemperature(degrees,unit){
+      if (unit === 'C') {
+        const result = convertToFaren(degrees)
+        return `${result}C`
+      } else if (unit === 'F') {
+        const result = convertToCel(degrees)
+        return `${result}F`
+      }
+    }
+    
+    console.log(convertTemperature(25, 'C'));
+    console.log(convertTemperature(86, 'F'))
+    
+   
+  </script>
+</body>
+
+</html>
