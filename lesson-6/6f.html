@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
+  <body>
+    <script>
+      const randomNumber = Math.random();
+      let result;
+      /*
+      if (randomNumber < 0.5) {
+        result = "heads";
+      } else {
+        result = "tails";
+      } */
+      randomNumber < 0.5 ? result = 'heads' : result = 'tails';
 
-<body>
-  <script>
-    
-    let results = '';
-    let randomNumber = Math.random();
-    if (randomNumber < 0.5) {
-      randomNumber = results;
-      
-    } else {
-      randomNumber = results;
-    }
-    
-    let guess = heads
-    if (guess === results){
-      console.log('Hurray i won')
-    } else {
-      console.log('try again')
-    }
-  </script>
-</body>
+      let guess = "heads";
 
+      // if (guess === result) {
+      //   console.log("You Win!");
+      // } else {
+      //   console.log("You lose!");
+      // }
+      guess === result ? console.log('You Win!') : console.log('You Lose!')
+
+
+    </script>
+  </body>
 </html>
