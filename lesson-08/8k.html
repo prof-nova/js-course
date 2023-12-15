@@ -13,7 +13,7 @@
     <script>
       // We can use const here since score is a reference
       // so we can modify it even if it uses const.
-      let score = JSON.parse(localStorage.getItem('score')) || {
+      const score = JSON.parse(localStorage.getItem('score')) || {
         wins: 0,
         losses: 0
       };
@@ -30,8 +30,8 @@
           score.losses++;
         }
         console.log(score);
-        
-         localStorage.setItem('score', JSON.stringify(score));
+
+        localStorage.setItem('score', JSON.stringify(score));
       }
     </script>
   </body>
