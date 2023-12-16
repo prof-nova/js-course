@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <style>
+    .button-sleep{
+      border: none;
+      background-color: rgb(230, 230, 230);
+      font-family: monospace;
+      font-size: 20px;
+      margin-right: 10px;
+      border-radius: 5px;
+      padding: 10px 10px;
+    }
+    .alt-button{
+      background-color: black;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <p>
+    <button class="button-sleep btn1" onclick="
+      const button = document.querySelector('.btn1');
+      if (!button.classList.contains('alt-button') ){
+        button.classList.add('alt-button');
+      } else {
+        button.classList.remove('alt-button');
+      }
+    
+    ">Gaming</button>
+    <button class="button-sleep btn2" onclick="
+       const button = document.querySelector('.btn2');
+      if (!button.classList.contains('alt-button') ){
+        button.classList.add('alt-button');
+      } else {
+        button.classList.remove('alt-button');
+      }
+    
+    ">Music</button>
+    <button class="button-sleep btn3" onclick="
+      const button = document.querySelector('.btn3');
+      if (!button.classList.contains('alt-button') ){
+        button.classList.add('alt-button');
+      } else {
+        button.classList.remove('alt-button');
+      }
+    ">Tech</button>
+  </p>
+  
+<script>
+</script>
+</body>
+
+</html>

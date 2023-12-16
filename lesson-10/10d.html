@@ -17,17 +17,25 @@
             margin: 10px 20px;
             border-radius: 20px;
         }
-        .btn-style2{
-
+        .is-toggled{
+            background-color: rgb(230, 230, 230);
+            color: black;
         }
     </style>
 </head>
 <body>
     <button class="btn-style1" onclick="
-        console.log('Happy coding')
+        putToggler()
         ">Gaming</button>
     <script>
-        
+        let btnStyle = document.querySelector('.btn-style1').classList;
+        function putToggler(){
+          if (btnStyle.contains('is-toggled') === true ){
+            btnStyle.remove('is-toggled');
+          } else {
+            btnStyle.add('is-toggled')
+          }
+        }
     </script>
 </body>
 </html>
