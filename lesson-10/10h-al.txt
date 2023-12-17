@@ -1,0 +1,18 @@
+Question: if we where to type a number less than 0
+display an error message
+steps 
+type number:
+1.type a number throuth the input
+2.computer stores the number
+   
+less than 0:
+1.computer checks if the number is less than zero
+
+display an error message 
+
+
+al.
+input styles 
+class="
+js-cost-input 
+cost-input"

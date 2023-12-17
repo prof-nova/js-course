@@ -45,6 +45,9 @@
         padding: 12px 15px;
         cursor: pointer;
       }
+      .error-text{
+        color: red;
+      }
     </style>
   </head>
   <body>
@@ -59,7 +62,8 @@
     <input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="
       handleCostKeydown(event);
     ">
-    <button onclick="mainevent();
+    <button onclick="
+      calculateTotal();
     " class="calculate-button">Calculate</button>
     <p class="js-total-cost"></p>
 
@@ -77,27 +81,38 @@
           calculateTotal();
         }
       }
-      
-      function mainevent(){
-        const inputElement1 = document.querySelector('.js-cost-input');
-        let cost1 = Number(inputElement1.value);
-        if (cost1 <= 0) {
-          document.querySelector('.js-total-cost')
-            .innerHTML = 'Hello world';
-        }else {
-          calculateTotal()
-        }
+
+      // function calculateTotal() {
+      //   const inputElement = document.querySelector('.js-cost-input');
+      //   let cost = Number(inputElement.value);
+
+      //   if (cost < 40) {
+      //     cost = cost + 10;
+      //   }
+
+      //   document.querySelector('.js-total-cost')
+      //     .innerHTML = `$${cost}`;
+      // }
+      function calculateTotal(){
+          const inputElement = document.querySelector('.js-cost-input');
+          let cost = Number(inputElement.value);
+          if (cost < 1 ){
+            const errorLog = document.querySelector('.js-total-cost');
+            errorLog.classList.add('error-text')
+            document.querySelector('.js-total-cost').innerHTML = 'Error: cost cannot be less than $0';
+          } else {
+            discountNumber()
+
+          }
+
       }
-      function calculateTotal() {
-        const inputElement = document.querySelector('.js-cost-input');
-        let cost = Number(inputElement.value);
-
-        if (cost < 40) {
-          cost = cost + 10;
+      function discountNumber(){
+        const inputElement2 = document.querySelector('.js-cost-input');
+        let dataValue = Number(inputElement2.value);
+        if (dataValue < 40){
+          dataValue = dataValue + 10;
+          document.querySelector('.js-total-cost').innerHTML = `$${dataValue}`
         }
-
-        document.querySelector('.js-total-cost')
-          .innerHTML = `$${cost}`;
       }
 
       function subscribe() {
