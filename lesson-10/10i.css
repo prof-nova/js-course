@@ -1,0 +1,22 @@
+body{
+  background-color: black
+}
+.genButton{
+  border: none;
+  font-size: 25px;
+  padding: 15px 25px;
+  margin-right: 5px;
+  border-radius: 30px;
+}
+.js-cal-display{
+  color: white;
+  font-size: 30px;
+}
+.brown{
+  background-color: #56575B;
+  color: whitesmoke;
+}
+.orange{
+  background-color: orange;
+  color: whitesmoke;
+}
