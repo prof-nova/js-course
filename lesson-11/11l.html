@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+  <script>
+    function minMax(nums) {
+      let result = {
+        min: '',
+        max: ''
+      }
+      let maxVal = nums[0];
+      let minVal = nums[0]
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > maxVal) {
+          maxVal = nums[i];
+        } else if (nums[i] < minVal){
+          minVal = nums[i]
+      }
+      } 
+      result.min = minVal
+      result.max = maxVal
+      return result
+    }
+    console.log(minMax([2,4,63,4,88]))
+  </script>
+</body>
+</html>

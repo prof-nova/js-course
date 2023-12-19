@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
 </head>
 <body>
     <script>
-        function addOne(array){
-            const result =[]
-            for (i=0; i<array.length; i++ ){
-                result.push(array[i] + 1)
+        function addNum(array, num){
+            const result = []
+            for(i=0; i<array.length; i++){
+                result.push(array[i] + num)
             }
             console.log(result)
         }
-        const myArray = [1, 2, 3]
-        addOne(myArray)
+        const myArray = [2, 6, 2, 9, 5, 3]
+        addNum(myArray, 2)
     </script>
 </body>
 </html>
