@@ -6,19 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>11b</title>
 </head>
-  <script>
-    const myArray = [166, 24, 2, 56, 3, 4, 76];
-    console.log(myArray.lenght);
-    
-    function getLastValue(arrayval){
-      const result = arrayval.lenght;
-      const result2 = arrayval[result]
-      console.log(result2)
-    }
-    //getLastValue(myArray)
-  </script>
 <body>
 
+  <script>
+    const myArray = [29, 24, 54, 85, 33, 94, 'hello world'];
+    console.log(myArray.length);
+
+    function getLastValue(arrayVal){
+      console.log(arrayVal[arrayVal.length - 1])
+    }
+    
+    getLastValue(myArray)
+  </script>
 </body>
 
-</html>''
+</html>
